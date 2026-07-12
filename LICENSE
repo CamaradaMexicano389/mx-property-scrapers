@@ -1,0 +1,39 @@
+Business Source License 1.1
+
+License text copyright (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
+"Business Source License" is a trademark of MariaDB Corporation Ab.
+
+---
+
+Parameters
+
+Licensor:             PADIM Contributors
+Licensed Work:        PADIM Scrapers
+                      The Licensed Work is (c) 2026 PADIM Contributors
+
+Additional Use Grant: You may use the Licensed Work for non-commercial
+                      purposes, including personal, academic, or research use.
+                      Commercial use requires a separate license agreement.
+
+Change Date:          2029-07-12
+
+Change License:       MIT (GNU General Public License, Version 2.0 or later)
+
+---
+
+Terms
+
+The Licensor hereby grants you the right to copy, modify, create derivative
+works, redistribute, and make non-production use of the Licensed Work. The
+Licensor may make the Licensed Work available under a different license
+after the Change Date.
+
+Each copy of the Licensed Work must include a copy of this license.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

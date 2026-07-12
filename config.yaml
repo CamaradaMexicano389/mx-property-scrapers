@@ -1,0 +1,31 @@
+# PADIM Scraper — Configuración de Portales
+settings:
+  max_properties_per_portal: 5
+  max_detail_retries: 2
+  request_delay: 1.0
+  output_file: "data/propiedades.jsonl"
+
+portals:
+  inmuebles24:
+    enabled: true
+    fetcher: stealthy
+    solve_cloudflare: true
+    base_url: "https://www.inmuebles24.com"
+    listing_url: "https://www.inmuebles24.com/inmuebles-en-venta.html"
+    detail_pattern: "/inmueble/"
+
+  vivanuncios:
+    enabled: true
+    fetcher: stealthy
+    solve_cloudflare: true
+    base_url: "https://www.vivanuncios.com.mx"
+    listing_url: "https://www.vivanuncios.com.mx/s-venta-inmuebles/v1c1097p1"
+    detail_pattern: ["anuncio/", "inmueble/"]
+
+  lamudi:
+    enabled: true
+    fetcher: dynamic
+    solve_cloudflare: false
+    base_url: "https://www.lamudi.com.mx"
+    listing_url: "https://www.lamudi.com.mx/for-sale/"
+    detail_pattern: "/detalle/"
