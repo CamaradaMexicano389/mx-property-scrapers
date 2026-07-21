@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-21",
+  "homepage": "https://github.com/CamaradaMexicano389/mx-property-scrapers",
+  "scrapers": [
+    {
+      "name": "inmuebles24",
+      "version": "1.0.0",
+      "description": "Conector para Inmuebles24",
+      "contentURL": [
+        "https://raw.githubusercontent.com/CamaradaMexicano389/mx-property-scrapers/main/scrape_inmuebles24.py",
+        "https://cdn.jsdelivr.net/gh/CamaradaMexicano389/mx-property-scrapers@main/scrape_inmuebles24.py"
+      ],
+      "sha256": ""
+    },
+    {
+      "name": "vivanuncios",
+      "version": "1.0.0",
+      "description": "Conector para Vivanuncios",
+      "contentURL": [
+        "https://raw.githubusercontent.com/CamaradaMexicano389/mx-property-scrapers/main/scrape_vivanuncios.py",
+        "https://cdn.jsdelivr.net/gh/CamaradaMexicano389/mx-property-scrapers@main/scrape_vivanuncios.py"
+      ],
+      "sha256": ""
+    }
+  ]
+}

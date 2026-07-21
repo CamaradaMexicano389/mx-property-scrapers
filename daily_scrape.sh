@@ -6,7 +6,7 @@
 # 4) Actualiza status.json
 set -euo pipefail
 
-REPO_DIR="/home/padim/workspace/projects/PADIM-scraper"
+REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
 VENV="$REPO_DIR/.venv-padim"
 OUTPUT_DIR="$REPO_DIR/data"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
@@ -22,35 +22,35 @@ echo " $(date)"
 echo "═══════════════════════════════════════════════"
 echo ""
 
-# ── 1. Lamudi (funcional, DynamicFetcher) ──
+# ── 1. Lamudi ──
 echo "─── 1/5 Lamudi ───"
-python3 -m padim.cli.main scrape lamudi \
+python3 scrape_lamudi.py \
     --colony "ciudad-de-mexico" \
     --output "$OUTPUT_DIR/lamudi_$TIMESTAMP.json" 2>&1 || echo "⚠️  Lamudi falló"
 echo ""
 
-# ── 2. Vivanuncios (curl_cffi directo, bypass Cloudflare) ──
+# ── 2. Vivanuncios ──
 echo "─── 2/5 Vivanuncios ───"
-python3 scripts/scrape_vivanuncios.py 2>&1 || echo "⚠️  Vivanuncios falló"
+python3 scrape_vivanuncios.py 2>&1 || echo "⚠️  Vivanuncios falló"
 echo ""
 
-# ── 3. Inmuebles24 (StealthyFetcher, timeout 180s) ──
+# ── 3. Inmuebles24 ──
 echo "─── 3/5 Inmuebles24 ───"
-timeout 180 python3 -m padim.cli.main scrape inmuebles24 \
+timeout 180 python3 scrape_inmuebles24.py \
     --colony "ciudad-de-mexico" \
     --output "$OUTPUT_DIR/inmuebles24_$TIMESTAMP.json" 2>&1 || echo "⚠️  Inmuebles24 falló (Cloudflare)"
 echo ""
 
-# ── 4. Propiedades.com (curl_cffi universal) ──
+# ── 4. Propiedades.com ──
 echo "─── 4/5 Propiedades.com ───"
-timeout 60 python3 -m padim.cli.main scrape propiedades \
+timeout 60 python3 scrape_propiedades.py \
     --colony "ciudad-de-mexico" \
     --output "$OUTPUT_DIR/propiedades_$TIMESTAMP.json" 2>&1 || echo "⚠️  Propiedades.com falló"
 echo ""
 
-# ── 5. EasyBroker (universal) ──
+# ── 5. EasyBroker ──
 echo "─── 5/5 EasyBroker ───"
-timeout 60 python3 -m padim.cli.main scrape easybroker \
+timeout 60 python3 scrape_easybroker.py \
     --colony "ciudad-de-mexico" \
     --output "$OUTPUT_DIR/easybroker_$TIMESTAMP.json" 2>&1 || echo "⚠️  EasyBroker falló"
 echo ""
@@ -70,7 +70,7 @@ echo ""
 
 # ── Consolidar a propiedades.jsonl + DB ──
 echo "─── Consolidando a propiedades.jsonl + DB ───"
-python3 scripts/consolidate_to_jsonl.py 2>&1 || echo "⚠️  Consolidación falló"
+python3 consolidate_to_jsonl.py 2>&1 || echo "⚠️  Consolidación falló"
 echo ""
 
 # ── Generar status.json ──
@@ -81,7 +81,7 @@ if [ -f "$REPO_DIR/site/status.json" ]; then
     DURATION=$((END_TS - START_TS))
     
     python3 -c "
-import json, sys
+import json
 path = '$REPO_DIR/site/status.json'
 with open(path) as f:
     s = json.load(f)
