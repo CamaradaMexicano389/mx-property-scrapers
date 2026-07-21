@@ -11,7 +11,7 @@
         "https://raw.githubusercontent.com/CamaradaMexicano389/mx-property-scrapers/main/scrape_inmuebles24.py",
         "https://cdn.jsdelivr.net/gh/CamaradaMexicano389/mx-property-scrapers@main/scrape_inmuebles24.py"
       ],
-      "sha256": ""
+      "sha256": "f9898380a65fa18d2640ff02d1fb41165e788354f6e2d513c34f5e2293ba8cf3"
     },
     {
       "name": "vivanuncios",
@@ -21,7 +21,17 @@
         "https://raw.githubusercontent.com/CamaradaMexicano389/mx-property-scrapers/main/scrape_vivanuncios.py",
         "https://cdn.jsdelivr.net/gh/CamaradaMexicano389/mx-property-scrapers@main/scrape_vivanuncios.py"
       ],
-      "sha256": ""
+      "sha256": "ed86131dc8b222b17cd5281a5af73f96ac864b544aa9d2540e9790be3d3afadb"
+    },
+    {
+      "name": "padim_scraper",
+      "version": "1.0.0",
+      "description": "Conector universal PADIM",
+      "contentURL": [
+        "https://raw.githubusercontent.com/CamaradaMexicano389/mx-property-scrapers/main/scraper_padim.py",
+        "https://cdn.jsdelivr.net/gh/CamaradaMexicano389/mx-property-scrapers@main/scraper_padim.py"
+      ],
+      "sha256": "74d714a16228e246ebcbbe564a016dfd90f15fe3d68ffb7133bfdebc49906b30"
     }
   ]
 }
