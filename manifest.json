@@ -1,13 +1,14 @@
 {
   "version": 1,
   "updatedAt": "2026-07-21",
-  "homepage": "https://github.com/CamaradaMexicano389/mx-property-scrapers",
+  "homepage": "https://codeberg.org/CamaradaMexicano389/mx-property-scrapers",
   "scrapers": [
     {
       "name": "inmuebles24",
       "version": "1.0.0",
       "description": "Conector para Inmuebles24",
       "contentURL": [
+        "https://codeberg.org/CamaradaMexicano389/mx-property-scrapers/raw/branch/main/scrape_inmuebles24.py",
         "https://raw.githubusercontent.com/CamaradaMexicano389/mx-property-scrapers/main/scrape_inmuebles24.py",
         "https://cdn.jsdelivr.net/gh/CamaradaMexicano389/mx-property-scrapers@main/scrape_inmuebles24.py"
       ],
@@ -18,6 +19,7 @@
       "version": "1.0.0",
       "description": "Conector para Vivanuncios",
       "contentURL": [
+        "https://codeberg.org/CamaradaMexicano389/mx-property-scrapers/raw/branch/main/scrape_vivanuncios.py",
         "https://raw.githubusercontent.com/CamaradaMexicano389/mx-property-scrapers/main/scrape_vivanuncios.py",
         "https://cdn.jsdelivr.net/gh/CamaradaMexicano389/mx-property-scrapers@main/scrape_vivanuncios.py"
       ],
@@ -28,6 +30,7 @@
       "version": "1.0.0",
       "description": "Conector universal PADIM",
       "contentURL": [
+        "https://codeberg.org/CamaradaMexicano389/mx-property-scrapers/raw/branch/main/scraper_padim.py",
         "https://raw.githubusercontent.com/CamaradaMexicano389/mx-property-scrapers/main/scraper_padim.py",
         "https://cdn.jsdelivr.net/gh/CamaradaMexicano389/mx-property-scrapers@main/scraper_padim.py"
       ],
